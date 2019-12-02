@@ -1,0 +1,300 @@
+<!DOCTYPE>
+<html>
+
+<head>
+
+  <title>My irfst styled page</title>
+
+
+ <link rel="stylesheet" type="text/css" href="file:///D:/Bilal/projects/djsdj.CSS"/>
+
+
+</head>
+
+
+
+ <body>
+
+
+
+
+
+
+
+
+<!-- the slid pics divs -->
+
+
+<div class="wrap">
+  <div id="arrow-left" class="arrow"></div>
+  <div id="slider">
+    <div class="slide slide1">
+      <div class="slide-content">
+        <span>Image One</span>
+      </div>
+    </div>
+    <div class="slide slide2">
+      <div class="slide-content">
+        <span>Image Two</span>
+      </div>
+    </div>
+    <div class="slide slide3">
+      <div class="slide-content">
+        <span>Image Three</span>
+      </div>
+    </div>
+  </div>
+  <div id="arrow-right" class="arrow"></div>
+</div>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+<!-- Site navigation menu -->
+<div id="banner">
+
+</div>
+
+
+                    <hr>
+
+
+<div>
+
+  <ul class="navbar" SS>
+
+
+    <li> <a href="index.html"> heros home page</a>
+    <li> <a href="musings.html">musceles</a>
+    <li> <a href="town.html">trainning program</a>
+    <li> <a href="links.html" target="blank">Links to a trianning videos</a>
+
+
+
+  </ul>
+
+
+</div>
+
+
+<hr style="color: red;">
+
+
+<!-- Main content -->
+<div >
+
+            <img class="imgsizees" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5adn5WRR_u-rH_FEmnR8jBCcJS_nRwji28-KS5v7zMZk4Zt0U">
+
+            <img class="imgsizees" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGjjKcfzt1y3ZZ7JcKIeap-Gq_3tu131Mx501v25cJI_y51tQvIg">
+            <img class="imgsizees" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe3IXonHHpfJSAM9egKXr5zDfr-GJE4qU7O31S4f0E0Rn7yoziRQ">
+
+</div>
+
+
+
+<div class="static-width">
+
+
+        <h1> Train like GOKU </h1>
+
+</div>
+
+
+<div>
+        <p>Welcome to the trainning giad </p>
+
+        <p>It lacks images, but at least it has style.
+           And it has links, even if they don't go
+           anywhere&hellip;</p>
+
+         <p>There should be more here, but we will take it step by step
+            no need to rush things</p>
+</div>
+
+
+<div >
+
+             <img class="imgsizees" src="http://i.ytimg.com/vi/I0idmhwiF9Q/0.jpg">  
+             <br>
+             
+             
+             <img class="imgsizees" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnTydM9Nx1nLbgsTjMsurgLUVmLAgJ4pd3FlSRiqx_hO9A4i2h">
+   <img class="imgsizees" src="https://qph.fs.quoracdn.net/main-qimg-815ae3040348d044e896beeb0b7e2fc6.webp">
+             <img class="imgsizees" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYDfxGOOi4JzS_55Bw16fS7nLtLfdhc6YeRXCy-GQWHi1g1xVw">
+<img class="imgsizees" src="https://i1.sndcdn.com/artworks-000142384864-cl6ls8-t500x500.jpg">
+
+           
+ </div>
+
+
+<!-- Sign and date the page, it's only polite! -->
+     <address>Made 5 April 20443434
+	   <br>
+           by myself.
+     </address>
+
+<div id="blue">
+
+
+
+</div>
+
+
+  <br>
+
+
+
+<div id="red">
+
+
+
+</div>
+
+<br>
+
+
+<div id="b">
+
+
+
+</div>
+
+
+<br>
+
+
+<div id="r">
+
+
+
+</div>
+
+<br>
+
+
+<div id="e">
+
+
+
+</div>
+
+
+
+<br>
+
+<div id="o">
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">  
+
+
+
+
+let sliderImages = document.querySelectorAll(".slide"),
+  arrowLeft = document.querySelector("#arrow-left"),
+  arrowRight = document.querySelector("#arrow-right"),
+  current = 0;
+
+// Clear all images
+
+function reset() {
+  for (let i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].style.display = "none";
+  }
+}
+
+
+// Init slider
+function startSlide() {
+  reset();
+  sliderImages[0].style.display = "block";
+}
+
+// Show prev
+function slideLeft() {
+  reset();
+  sliderImages[current - 1].style.display = "block";
+  current--;
+}
+
+// Show next
+function slideRight() {
+  reset();
+  sliderImages[current + 1].style.display = "block";
+  current++;
+}
+
+// Left arrow click
+arrowLeft.addEventListener("click", function() {
+  if (current === 0) {
+    current = sliderImages.length;
+  }
+  slideLeft();
+});
+
+// Right arrow click
+arrowRight.addEventListener("click", function() {
+  if (current === sliderImages.length - 1) {
+    current = -1;
+  }
+  slideRight();
+});
+
+startSlide();
+
+
+
+
+
+
+
+</script>
+
+
+ </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
